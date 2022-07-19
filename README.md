@@ -10,11 +10,11 @@ $ mvn clean package
 
 - Run Node 1
 ```sh
-$ java -jar -Dserver.port=8081 target/jgoupsdemo-0.0.1-SNAPSHOT.jar
+$ java -Dserver.port=8081 -Djava.net.preferIPv4Stack=true -jar target/jgroupsdemo-0.0.1-SNAPSHOT.jar
 ```
 - Run Node 2
 ```sh
-$ java -jar -Dserver.port=8082 target/jgoupsdemo-0.0.1-SNAPSHOT.jar
+$ java -Dserver.port=8082 -Djava.net.preferIPv4Stack=true -jar target/jgroupsdemo-0.0.1-SNAPSHOT.jar
 ```
 - Check if Node 1 is the leader
 ```sh
